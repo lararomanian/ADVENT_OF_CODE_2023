@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CubeConundrumController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\PhaseTwoController;
 use Illuminate\Http\Request;
@@ -20,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get("/input", [PhaseTwoController::class, "returnResponse"]);
+Route::get("/input", [CubeConundrumController::class, "returnResponse"]);
